@@ -1,0 +1,132 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+:root {
+    --main-font: 'Roboto', sans-serif;
+    --font-color: #1c1c1c;
+    --second-color: #1967d2;
+    --backgroun-color: #0f3c63;
+}
+
+html {
+    background-color: #8ea1b9;
+}
+
+section {
+    max-width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.navLink {
+    border-radius: 50%;
+}
+
+.logoIcon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url("./assets/images/logo.jpg");
+    background-size: contain;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+}
+
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: var(--font-color);
+}
+
+.signButton:hover,
+.content:hover {
+    color: #eee;
+    background-color: var(--backgroun-color);
+}
+
+.signButton {
+    padding: 10px;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    transition: 0.3s;
+}
+
+.content {
+    display: flex;
+    position: relative;
+    padding: .5rem;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    cursor: pointer;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.tooltip {
+    opacity: 0;
+    position: absolute;
+    top: -6px;
+    padding: 7px;
+    white-space: nowrap;
+    background-color: var(--backgroun-color);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    border-radius: .5rem;
+    pointer-events: none;
+    color: #eee;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.tooltip,
+.icon {
+    transition: .3s;
+}
+
+.content:hover {}
+
+.content:hover .icon {}
+
+.tooltip-left {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.tooltip-left::after {
+    top: 50%;
+    transform: translate(50%, -50%) rotate(45deg);
+    right: 1px;
+}
+
+.content:hover .tooltip-left {
+    opacity: 1;
+    left: -1rem;
+}
