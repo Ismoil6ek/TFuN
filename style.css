@@ -5,9 +5,7 @@
     font-family: var(--main-font);
 }
 
-html {
-    background-image: url("./assets/images/back.jpg");
-}
+html {}
 
 :root {
     --main-font: 'Roboto', sans-serif;
@@ -265,11 +263,9 @@ section {
     background-color: #bbb;
     color: black;
     border-radius: 15px;
-    backdrop-filter: blur( 4px);
 }
 
 .flip-card-back {
-    backdrop-filter: blur( 4px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,7 +281,6 @@ section {
 }
 
 .flip-card-back {
-    backdrop-filter: blur( 4px);
     font-size: 1rem;
     background: #0f3c6386;
 }
