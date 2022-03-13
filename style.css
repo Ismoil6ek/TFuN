@@ -63,8 +63,6 @@ section {
     padding: 10px;
     background: rgba( 255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
-    backdrop-filter: blur( 4px);
-    -webkit-backdrop-filter: blur( 4px);
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18);
     transition: 0.3s;
@@ -79,8 +77,6 @@ section {
     cursor: pointer;
     background: rgba( 255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
-    backdrop-filter: blur( 4px);
-    -webkit-backdrop-filter: blur( 4px);
     border: 1px solid rgba( 255, 255, 255, 0.18);
     border-radius: 50%;
 }
@@ -114,6 +110,7 @@ section {
     border-radius: 3px;
 }
 
+.content,
 .tooltip,
 .icon {
     transition: .3s;
@@ -158,8 +155,6 @@ section {
     cursor: pointer;
     background: rgba( 255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
-    backdrop-filter: blur( 4px);
-    -webkit-backdrop-filter: blur( 4px);
     border: 1px solid rgba( 255, 255, 255, 0.18);
     transition: 0.3s ease-out;
 }
@@ -177,6 +172,41 @@ section {
 #countries div.activeCountry {
     background-color: var(--backgroun-color);
     color: #eee;
+}
+
+.price {
+    color: #eee;
+    text-shadow: 1px 1px #1c1c1c;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.freeSection,
+.saleSection,
+.premiumSection {
+    display: flex;
+    min-height: 500px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    display: block;
+    height: 400px;
+    width: 266px;
+    background-position: top;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    cursor: pointer;
+    background: rgba( 255, 255, 255, 0.25);
+    border-radius: 15px;
+    background-size: cover;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.2);
 }
 
 

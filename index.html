@@ -11,83 +11,102 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./loadingPage.css">
 </head>
 
-
-<header>
-    <section>
-        <nav class="nav">
-
-            <a class="navLink" href="#">
-                <div class="logoIcon"></div>
-            </a>
-
-            <div class="sign">
-                <div class="content">
-                    <div class='icon'>?</div>
-                    <div class="tooltip tooltip-left">Sign in to keep your<br> changes up-to-date ;)</div>
-                </div>
-                <div class="signButton">
-                    Sign
-                </div>
-            </div>
-
-        </nav>
-    </section>
-</header>
-
-<main>
-    <section>
-        <div id="countries" class="filter">
-            <div class="btn activeCountry">Random</div>
-            <div class="btn">Toshkent</div>
-            <div class="btn">Samarqand</div>
-            <div class="btn">Andijon</div>
-            <div class="btn">Buxoro</div>
-            <div class="btn">Fargona</div>
-            <div class="btn">Buxoro</div>
-            <div class="btn">Xorazm</div>
-            <div class="btn">Namangan</div>
-            <div class="btn">Jizzax</div>
-            <div class="btn">Sirdaryo</div>
-            <div class="btn">Navoiy</div>
-        </div>
-        <div id="tags" class="filter">
-            <div class="btn activeTag">Random</div>
-            <div class="btn">Restaurant</div>
-            <div class="btn">High Building</div>
-            <div class="btn">Park</div>
-            <div class="btn">Halal</div>
-            <div class="btn">Nature</div>
-            <div class="btn">Museum</div>
-            <div class="btn">Theater</div>
-            <div class="btn">Music</div>
-            <div class="btn">Cinema</div>
-            <div class="btn">For kids</div>
-            <div class="btn">Pool</div>
-            <div class="btn">Praying place</div>
-            <div class="btn">Health & Medical</div>
-            <div class="btn">Haircut</div>
-            <div class="btn">Dentist</div>
-            <div class="btn">PhoneRepair</div>
-            <div class="btn">Supermarket</div>
-            <div class="btn">Shopping</div>
-            <div class="btn">Sports</div>
-            <div class="btn">Financial Services</div>
-            <div class="btn">Playstation</div>
-        </div>
-    </section>
-    <section></section>
-    <section></section>
-    <section></section>
-</main>
-
-<footer>
-    <section></section>
-</footer>
-
 <body>
+    <div class="loading">
+        <svg width="200" height="200" id="svg">
+            <circle id="dot1" class="shape" />
+            <circle id="dot2" class="shape" />
+            <circle id="dot3" class="shape" />
+            <circle id="dot4" class="shape" />
+        </svg>
+    </div>
+
+
+
+    <header>
+        <section>
+            <nav class="nav">
+
+                <a class="navLink" href="./FAYLLLLL.pdf">
+                    <div class="logoIcon"></div>
+                </a>
+
+                <div class="sign">
+                    <div class="content">
+                        <div class='icon'>?</div>
+                        <div class="tooltip tooltip-left">Sign in to keep your<br> changes up-to-date ;)</div>
+                    </div>
+                    <div class="signButton">
+                        Sign
+                    </div>
+                </div>
+
+            </nav>
+        </section>
+    </header>
+
+    <main class="main">
+        <section>
+            <div id="countries" class="filter">
+                <div class="btn activeCountry">Random</div>
+                <div class="btn">Toshkent</div>
+                <div class="btn">Samarqand</div>
+                <div class="btn">Andijon</div>
+                <div class="btn">Buxoro</div>
+                <div class="btn">Fargona</div>
+                <div class="btn">Buxoro</div>
+                <div class="btn">Xorazm</div>
+                <div class="btn">Namangan</div>
+                <div class="btn">Jizzax</div>
+                <div class="btn">Sirdaryo</div>
+                <div class="btn">Navoiy</div>
+            </div>
+            <div id="tags" class="filter">
+                <div class="btn activeTag">Random</div>
+                <div class="btn">Restaurant</div>
+                <div class="btn">High Building</div>
+                <div class="btn">Park</div>
+                <!-- <div class="btn">Halal</div> -->
+                <div class="btn">Nature</div>
+                <div class="btn">Museum</div>
+                <div class="btn">Theater</div>
+                <div class="btn">Music</div>
+                <div class="btn">Cinema</div>
+                <div class="btn">For kids</div>
+                <div class="btn">Pool</div>
+                <div class="btn">Praying place</div>
+                <div class="btn">Health & Medical</div>
+                <div class="btn">Haircut</div>
+                <div class="btn">Dentist</div>
+                <div class="btn">PhoneRepair</div>
+                <div class="btn">Supermarket</div>
+                <div class="btn">Shopping</div>
+                <div class="btn">Sports</div>
+                <div class="btn">Financial Services</div>
+                <div class="btn">Playstation</div>
+            </div>
+        </section>
+        <section class="price">Free
+            <div class="freeSection"></div>
+        </section>
+        <section class="price">Sale
+            <div class="saleSection"></div>
+        </section>
+        <section class="price">Premium
+            <div class="premiumSection"></div>
+        </section>
+    </main>
+
+    <footer>
+        <section></section>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase.js"></script>
     <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/loading.js"></script>
 </body>
 
 </html>
