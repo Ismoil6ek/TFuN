@@ -5,6 +5,10 @@
     font-family: var(--main-font);
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
 html {}
 
 :root {
