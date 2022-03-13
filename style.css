@@ -5,6 +5,10 @@
     font-family: var(--main-font);
 }
 
+html {
+    background-image: url("./assets/images/back.jpg");
+}
+
 :root {
     --main-font: 'Roboto', sans-serif;
     --font-color: #1c1c1c;
@@ -192,10 +196,13 @@ section {
     gap: 20px;
 }
 
-.card {
+.flip-card img {
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.flip-card {
     display: block;
-    height: 400px;
-    width: 266px;
     background-position: top;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
     cursor: pointer;
@@ -205,8 +212,82 @@ section {
     transition: all 0.3s;
 }
 
-.card:hover {
+.flip-card:hover {
     transform: scale(1.2);
+}
+
+.flip-card {
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    cursor: pointer;
+    background: rgba( 255, 255, 255, 0.25);
+    border-radius: 15px;
+    background-size: cover;
+    background-color: transparent;
+    width: 266px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    cursor: pointer;
+    background: rgba( 255, 255, 255, 0.25);
+    border-radius: 15px;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    cursor: pointer;
+    background: rgba( 255, 255, 255, 0.25);
+    border-radius: 15px;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+    border-radius: 15px;
+    backdrop-filter: blur( 4px);
+}
+
+.flip-card-back {
+    backdrop-filter: blur( 4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+}
+
+.flip-card-back h1 {
+    font-size: 2rem;
+}
+
+.flip-card-back {
+    backdrop-filter: blur( 4px);
+    font-size: 1rem;
+    background: #0f3c6386;
 }
 
 

@@ -76,12 +76,20 @@ function showPlaces(my_db_list, section, sectionID) {
         var value = my_db_list[key];
 
         var card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("flip-card");
 
         card.innerHTML = `
-
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="${value.fullimg}" alt="Avatar" style="width:266px;height:400px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>${value.location}</h1> 
+            <p>${value.place_name}</p> 
+            <p>${value.overview}</p>
+          </div>
+        </div>
                 `;
-        card.style.backgroundImage = `url("${value.fullimg}")`
 
         if (value.type == "Free") {
 
