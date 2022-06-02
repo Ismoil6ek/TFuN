@@ -2,9 +2,8 @@
 
 .loading {
     position: absolute;
-    left: 3%;
-    height: 95%;
-    width: 95%;
+    height: 99vh;
+    width: 99vw;
     background-color: #8ea1b9;
     z-index: 999;
     opacity: 1;

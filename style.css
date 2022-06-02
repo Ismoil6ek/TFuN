@@ -141,6 +141,10 @@ section {
 
 /* Main Content */
 
+.main {
+    display: none;
+}
+
 .filter {
     display: flex;
     align-items: center;
